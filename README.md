@@ -1,8 +1,6 @@
 # coding-test
 Frontend Development Test
 
-
-
 Samlple site made in
 - HTML
 - CSS
@@ -17,4 +15,4 @@ can be run directly by opening
 
 in browser
 
-or you can put this folder in root htdocs/wwww 
+or you can put this folder in root htdocs/wwww of your local server
