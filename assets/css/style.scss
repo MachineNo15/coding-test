@@ -1,0 +1,332 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+
+  img {
+    width: 100%;
+  }
+
+  * {
+    // outline: 1px solid red;
+    // transition: .5s;
+  }
+
+  h1 {
+    margin: 0;
+  }
+
+  header {
+    background: darkgreen;
+    color: white;
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      padding: 10px;
+      .logo {
+        width: 33.33%;
+        display: flex;
+        i {
+          font-size: 40px;
+          display: inline-block;
+        }
+        .name {
+          margin-left: 20px;
+          display: inline-block;
+          font-size: 25px;
+        }
+      }
+
+      .search {
+        width: 33.33%;
+        position: relative;
+        input {
+          width: 100%;
+          border: 5px solid white;
+          background: whitesmoke;
+          padding: 5px;
+        }
+        .icon {
+          float: right;
+          position: absolute;
+          top: 0px;
+          right: 0px;
+          background: transparent;
+          border: none;
+
+          padding: 10px 20px;
+
+          &:hover {
+            cursor: pointer;
+            background: rgb(211, 255, 213);
+          }
+
+          i {
+            color: black;
+          }
+        }
+      }
+
+      .actions {
+        width: 33.33%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: center;
+
+        .calender {
+          padding: 10px 20px;
+          &:hover {
+            cursor: pointer;
+            background: rgb(211, 255, 213);
+            color: black;
+          }
+        }
+
+        .profile {
+          padding: 10px 20px;
+          &:hover {
+            cursor: pointer;
+            background: rgb(211, 255, 213);
+            color: black;
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    &.container {
+      // padding: 0 1.5rem;
+    }
+
+    section {
+      // height: 100%;
+
+      &:not(:first-child) {
+        margin: 2rem 0;
+      }
+    }
+
+    .slider {
+      .slider__container {
+      }
+
+      .slider__item {
+        height: auto;
+        display: none;
+        &.active {
+          display: block;
+        }
+
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+
+      .slider__img {
+        object-fit: cover;
+        height: 100vh;
+      }
+    }
+
+    .cards {
+      .card__holder {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        width: 33.33%;
+        text-align: center;
+      }
+
+      .card__img {
+        border-radius: 10px;
+      }
+
+      .card__btn {
+        width: 150px;
+        height: 60px;
+
+        margin: 40px 0;
+
+        border-width: 15px;
+        border-right-color: rgb(172, 172, 172);
+        border-top-color: rgb(243, 243, 243);
+        border-left-color: rgb(236, 236, 236);
+        border-bottom-color: rgb(115, 115, 115);
+        background-color: rgb(230, 230, 230);
+
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+    }
+
+    .map {
+      position: relative;
+
+      .map__area {
+        background: rgb(240, 233, 255);
+        height: 100vh;
+        width: 100%;
+      }
+
+      .map__control {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        height: 100vh;
+
+        .navigation {
+          position: absolute;
+          right: 20px;
+          top: 20px;
+
+          width: 20%;
+
+          &:hover {
+            .links {
+              display: block;
+            }
+          }
+
+          .menu {
+            float: right;
+            padding: 10px 16px;
+            border: 2px solid;
+            border-radius: 100px;
+            position: static;
+            right: -20px;
+          }
+
+          .links {
+            border: 1px solid black;
+            border-top-width: 30px;
+            width: 250px;
+            display: none;
+            position: absolute;
+            right: 0;
+            top: 40px;
+          }
+
+          ul {
+            padding: 0;
+            list-style-type: none;
+            margin: 0;
+            li {
+              padding: 3px 20px;
+              position: relative;
+
+              .sub-menu {
+                display: none;
+                position: absolute;
+                left: -101%;
+                width: 100%;
+                top: 0;
+              }
+
+              .layers {
+                background: white;
+                .layer {
+                  padding: 5px 20px;
+                  display: flex;
+                  justify-content: space-between;
+                  text-align: left;
+
+                  .box {
+                    width: 20px;
+                    height: 20px;
+                    background: orange;
+                  }
+                }
+              }
+
+              &:hover {
+                background: rgb(213, 255, 192);
+                font-weight: bold;
+                cursor: pointer;
+
+                .sub-menu {
+                  display: block;
+                  font-weight: normal;
+                }
+              }
+
+              .tools {
+                border: 1px solid black;
+                .title {
+                  margin: 0;
+                  padding: 7px 0px;
+                  background: white;
+                  text-align: center;
+                }
+
+                .item {
+                  padding: 5px 10px;
+                  &:hover {
+                    background: whitesmoke;
+                    font-weight: bold;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .buttons {
+          position: absolute;
+          right: 20px;
+          bottom: 20px;
+        }
+
+        .rack {
+          display: flex;
+          flex-direction: column;
+
+          width: 40px;
+
+          .action {
+            background: transform;
+            border: none;
+            padding: 5px 10px;
+            margin: 2px 0;
+
+            &:hover {
+              background: whitesmoke;
+              cursor: pointer;
+            }
+
+            i {
+              font-size: 17px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  .content {
+    padding: 20px;
+    height: 150px;
+    background: whitesmoke;
+  }
+
+  .copyright {
+    background: rgb(0, 102, 0);
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+    p {
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,268 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body img {
+  width: 100%;
+}
+body h1 {
+  margin: 0;
+}
+body header {
+  background: darkgreen;
+  color: white;
+}
+body header nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px;
+}
+body header nav .logo {
+  width: 33.33%;
+  display: flex;
+}
+body header nav .logo i {
+  font-size: 40px;
+  display: inline-block;
+}
+body header nav .logo .name {
+  margin-left: 20px;
+  display: inline-block;
+  font-size: 25px;
+}
+body header nav .search {
+  width: 33.33%;
+  position: relative;
+}
+body header nav .search input {
+  width: 100%;
+  border: 5px solid white;
+  background: whitesmoke;
+  padding: 5px;
+}
+body header nav .search .icon {
+  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: transparent;
+  border: none;
+  padding: 10px 20px;
+}
+body header nav .search .icon:hover {
+  cursor: pointer;
+  background: #d3ffd5;
+}
+body header nav .search .icon i {
+  color: black;
+}
+body header nav .actions {
+  width: 33.33%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+body header nav .actions .calender {
+  padding: 10px 20px;
+}
+body header nav .actions .calender:hover {
+  cursor: pointer;
+  background: #d3ffd5;
+  color: black;
+}
+body header nav .actions .profile {
+  padding: 10px 20px;
+}
+body header nav .actions .profile:hover {
+  cursor: pointer;
+  background: #d3ffd5;
+  color: black;
+}
+body main section:not(:first-child) {
+  margin: 2rem 0;
+}
+body main .slider .slider__item {
+  height: auto;
+  display: none;
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 3s;
+  animation-name: fade;
+  animation-duration: 3s;
+}
+body main .slider .slider__item.active {
+  display: block;
+}
+body main .slider .slider__img {
+  object-fit: cover;
+  height: 100vh;
+}
+body main .cards .card__holder {
+  display: flex;
+  flex-wrap: wrap;
+}
+body main .cards .card {
+  width: 33.33%;
+  text-align: center;
+}
+body main .cards .card__img {
+  border-radius: 10px;
+}
+body main .cards .card__btn {
+  width: 150px;
+  height: 60px;
+  margin: 40px 0;
+  border-width: 15px;
+  border-right-color: #acacac;
+  border-top-color: #f3f3f3;
+  border-left-color: #ececec;
+  border-bottom-color: #737373;
+  background-color: #e6e6e6;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+body main .map {
+  position: relative;
+}
+body main .map .map__area {
+  background: #f0e9ff;
+  height: 100vh;
+  width: 100%;
+}
+body main .map .map__control {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: 100vh;
+}
+body main .map .map__control .navigation {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 20%;
+}
+body main .map .map__control .navigation:hover .links {
+  display: block;
+}
+body main .map .map__control .navigation .menu {
+  float: right;
+  padding: 10px 16px;
+  border: 2px solid;
+  border-radius: 100px;
+  position: static;
+  right: -20px;
+}
+body main .map .map__control .navigation .links {
+  border: 1px solid black;
+  border-top-width: 30px;
+  width: 250px;
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 40px;
+}
+body main .map .map__control .navigation ul {
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
+}
+body main .map .map__control .navigation ul li {
+  padding: 3px 20px;
+  position: relative;
+}
+body main .map .map__control .navigation ul li .sub-menu {
+  display: none;
+  position: absolute;
+  left: -101%;
+  width: 100%;
+  top: 0;
+}
+body main .map .map__control .navigation ul li .layers {
+  background: white;
+}
+body main .map .map__control .navigation ul li .layers .layer {
+  padding: 5px 20px;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+body main .map .map__control .navigation ul li .layers .layer .box {
+  width: 20px;
+  height: 20px;
+  background: orange;
+}
+body main .map .map__control .navigation ul li:hover {
+  background: #d5ffc0;
+  font-weight: bold;
+  cursor: pointer;
+}
+body main .map .map__control .navigation ul li:hover .sub-menu {
+  display: block;
+  font-weight: normal;
+}
+body main .map .map__control .navigation ul li .tools {
+  border: 1px solid black;
+}
+body main .map .map__control .navigation ul li .tools .title {
+  margin: 0;
+  padding: 7px 0;
+  background: white;
+  text-align: center;
+}
+body main .map .map__control .navigation ul li .tools .item {
+  padding: 5px 10px;
+}
+body main .map .map__control .navigation ul li .tools .item:hover {
+  background: whitesmoke;
+  font-weight: bold;
+}
+body main .map .map__control .buttons {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}
+body main .map .map__control .rack {
+  display: flex;
+  flex-direction: column;
+  width: 40px;
+}
+body main .map .map__control .rack .action {
+  background: transform;
+  border: none;
+  padding: 5px 10px;
+  margin: 2px 0;
+}
+body main .map .map__control .rack .action:hover {
+  background: whitesmoke;
+  cursor: pointer;
+}
+body main .map .map__control .rack .action i {
+  font-size: 17px;
+}
+footer .content {
+  padding: 20px;
+  height: 150px;
+  background: whitesmoke;
+}
+footer .copyright {
+  background: #006600;
+  color: white;
+  text-align: center;
+  padding: 5px 0;
+}
+footer .copyright p {
+  margin: 0;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+    /* transform: translateX(-100%); */
+  }
+  to {
+    opacity: 1;
+    /* transform: translateX(100%); */
+  }
+}
